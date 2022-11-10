@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/saveUser" method="post">
+        姓名： <input name="userName" value="zhangsan"/> <br/>
+        年龄： <input name="age" value="18"/> <br/>
+        生日： <input name="birth" value="2019/12/10"/> <br/>
+        宠物姓名：<input name="pet.name" value="cat,3"/><br/>
+<!--        宠物年龄：<input name="pet.age" value="3"/>-->
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>

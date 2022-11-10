@@ -1,0 +1,38 @@
+person:
+  #  单引号会将 \n作为字符串输出   双引号会将\n 作为换行输出
+  #  双引号不会转义，单引号会转义
+#  key: value；kv之间有空格
+#  大小写敏感
+#  使用缩进表示层级关系
+#  缩进不允许使用tab，只允许空格
+#  缩进的空格数不重要，只要相同层级的元素左对齐即可
+#  '#'表示注释
+#  字符串无需加引号，如果要加，''与""表示字符串内容 会被 转义/不转义
+  username: 张三
+  boss: true
+  birth: 1856/02/03
+  age: 64
+  pet:
+    name: cat
+    weight: 9.9
+  interests:
+    -篮球
+    -足球
+  animal:
+    -pig
+    -fox
+  score:
+    english: 80
+    math: 95
+  salary:
+    -9999.9
+    -9999.6
+  allPets:
+    sick:
+      - name: cat
+        weight: 6.6
+      - name: dog
+        weight: 12.3
+    health:
+      - name: fox
+        weight: 33
