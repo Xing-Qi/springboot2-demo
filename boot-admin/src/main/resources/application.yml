@@ -4,3 +4,27 @@ spring:
     url: jdbc:mysql://localhost:3306/mybatis
     username: root
     password: 123456
+
+    druid:
+      aop-patterns: com.atguigu.admin.*  #springbean监控
+      filters: stat,wall,slf4j  #所有开启的功能
+
+      stat-view-servlet:  #监控页配置
+        enabled: true
+        login-username: admin
+        login-password: admin
+        reset-enable: false
+      web-stat-filter:  #web监控
+        enabled: true
+        urlPattern: /*
+        exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+management:
+  endpoints:
+    enabled-by-default: true #暴露所有端点
+    web:
+      exposure:
+        include: '*' #以web方式暴露所有
